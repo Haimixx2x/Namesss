@@ -5,7 +5,7 @@ import platform
 
 print("ОС: "+platform.system())
 
-if platform.system() == ' ':
+if platform.system() == 'Linux':
 
 	print("""
 
