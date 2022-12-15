@@ -30,7 +30,7 @@ if platform.system() == 'Linux':
 
 	""")
 
-print("")
+print(" ")
 ip= str(input("                      Введите айпи адрес: "))
 port= int(input("                      Введите порт: "))
 choice = str(input("                   Вы действительно хотите запустить атаку:"))
