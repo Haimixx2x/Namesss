@@ -66,6 +66,6 @@ def run2():
 for y in range(threads):
 		th = threading.Thread(target = run)
 		th.start()
-	else:
+for y in range(threads):
 		th = threading.Thread(target = run2)
 		th.start()
